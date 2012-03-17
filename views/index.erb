@@ -1,0 +1,31 @@
+<script language='javascript'>
+ var milisec=0
+ var seconds=0
+ var minutes=<%= @minutes %>
+ //document.d2.value='20'
+ 
+function display(){
+
+ if (milisec<=0){
+    milisec=9
+    seconds-=1
+ }
+ if (seconds<=-1){
+    milisec=0
+    minutes-=1
+    seconds=59
+ }
+ if(minutes<=0){
+   document.getElementById('t1').innerHTML="Time Over";
+ }
+ else
+    milisec-=1
+    document.getElementById('t1').innerHTML=minutes+"."+seconds+"."+milisec
+}
+ 
+</script>
+
+<body onLoad="display()">
+<h1><div id='t1'></h1>
+</div>
+</body>

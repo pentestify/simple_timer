@@ -1,0 +1,8 @@
+super-simple timer
+
+setup:
+ - install some rubies (use rvm, it's super awesome)
+ - $ git clone 
+ - $ gem install sinatra
+ - $ rackup
+ - browse to http://127.0.0.1:9292/countdown/15 (15 minutes)
