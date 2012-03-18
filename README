@@ -1,4 +1,4 @@
-super-simple timer
+super-simple countdown timer. use it to get shit done.
 
 setup:
  - install some rubies (use rvm, it's super awesome)
