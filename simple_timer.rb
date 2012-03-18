@@ -6,7 +6,7 @@ before do
 end
  
 get '/' do
-  @minutes = 5
+  @minutes = "05"
   erb :index
 end
 
@@ -14,8 +14,8 @@ get '/exception' do
   "sorry, that's not allowed, request contains bad data"
 end
 
-get '/countdown/:mins' do
-  @minutes = params[:mins]
+get '/:mins' do
+  @minutes = "0#{params[:mins]}"
   erb :index
+  
 end
-

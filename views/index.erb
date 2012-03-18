@@ -1,23 +1,45 @@
-<script>
-var count = <%=@minutes%> * 60;
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.countdown.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('#counter').countdown({
+          image: 'img/digits.png',
+          startTime: '00:00:<%=@minutes%>:00'
+        });
 
-var counter=setInterval("timer()",1000); //1000 will  run it every 1 second
-
-function timer()
-{
-  count=count-1;
-  if (count <= 0)
-  {
-     clearInterval(counter);
-     document.getElementById("timer").innerHTML= "times up!";
-     return;
-  }
-
- document.getElementById("timer").innerHTML=count + " secs";
-}
-</script>
-<html>
-<body>
-<span id="timer"></span>
-</body>
-</html>
+        //$('#counter_2').countdown({
+        //  image: 'img/digits.png',
+        //  startTime: '00:00',
+        //  timerEnd: function(){ alert('end!'); },
+        //  format: 'mm:ss'
+        //});
+      });
+    </script>
+    <style type="text/css">
+      br { clear: both; }
+      .cntSeparator {
+        font-size: 54px;
+        margin: 10px 7px;
+        color: #000;
+      }
+      .desc { margin: 7px 3px; }
+      .desc div {
+        float: left;
+        font-family: Arial;
+        width: 70px;
+        margin-right: 65px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="counter"></div>
+  <div class="desc">
+    <div>Days</div>
+    <div>Hours</div>
+    <div>Minutes</div>
+    <div>Seconds</div>
+  </div>
+  </body>
