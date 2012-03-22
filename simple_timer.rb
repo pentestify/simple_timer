@@ -15,7 +15,12 @@ get '/exception' do
 end
 
 get '/:mins' do
-  @minutes = "0#{params[:mins]}"
+  if params[:mins].to_i >9
+    @minutes = "#{params[:mins]}"
+  else
+    @minutes = "0#{params[:mins]}"
+  end
+  
   erb :index
   
 end

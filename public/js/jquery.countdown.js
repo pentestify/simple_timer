@@ -13,7 +13,7 @@ jQuery.fn.countdown = function(userOptions)
     // startTime and format MUST follow the same format.
     // also you cannot specify a format unordered (e.g. hh:ss:mm is wrong)
     format: "dd:hh:mm:ss",
-    startTime: "01:12:32:55",
+    startTime: "01:00:00:00",
     digitImages: 6,
     digitWidth: 53,
     digitHeight: 77,
