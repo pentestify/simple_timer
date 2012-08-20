@@ -2,7 +2,7 @@ require 'sinatra'
  
 before do
   ## Basic blacklisting of metacharacters
-  redirect to "/exception" if request.path_info =~ /\;|\|\%\(\)/
+  redirect to "/exception" if !(request.path_info =~ /[^0-9].*/)
 end
  
 get '/' do
@@ -21,6 +21,5 @@ get '/:mins' do
     @minutes = "0#{params[:mins]}"
   end
   
-  erb :index
-  
+  erb :index  
 end
