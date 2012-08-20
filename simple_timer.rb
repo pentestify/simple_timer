@@ -2,7 +2,7 @@ require 'sinatra'
  
 before do
   ## Basic blacklisting of metacharacters
-  redirect to "/exception" if request.path_info =~ /\;|\|/
+  redirect to "/exception" if request.path_info =~ /\;|\|\%\(\)/
 end
  
 get '/' do
