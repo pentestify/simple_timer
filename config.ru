@@ -1,6 +1,4 @@
-require './simple_timer'
-require './helpers'
- 
+require './simple_timer' 
 root_dir = File.dirname(__FILE__)
  
 set :environment,	:production

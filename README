@@ -5,6 +5,6 @@ setup:
  - $ git clone 
  - $ gem install sinatra
  - $ rackup
- - browse to http://127.0.0.1:9292/countdown/15 (15 minutes)
+ - browse to http://127.0.0.1:9292/15 (15 minutes)
 
 Screenshot: http://www.pentestify.com/projects/simple_timer/screenshot_124.png
