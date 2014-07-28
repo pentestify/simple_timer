@@ -7,4 +7,4 @@ setup:
  - $ rackup
  - browse to http://127.0.0.1:9292/15 (15 minutes)
 
-Demo: http://timer.pentestify.com/5
+Demo: http://pentestify-timer.heroku.com/5
